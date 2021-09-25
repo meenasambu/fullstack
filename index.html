@@ -4,51 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> full stack </title>
-    <style>
-    div{
-        height: 150px;
-        background-color: sienna;
+    <title>Document</title>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
     }
-    span{
-        
-        background-color: tomato;
+
+    div.parent {
+        height: 500px;
+        background-color: #111;
     }
-    </style>
+    div.child {
+        width: 100px;
+        height: 100px;
+        margin-left: 100px;
+        border-radius: 50%;
+        background-color: coral;
+        animation: 1s move ease;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-delay: 1s;
+    }
+    div.child-2 {
+        width: 100px;
+        height: 100px;
+        margin-left: 100px;
+        border-radius: 50%;
+        background-color: coral;
+        animation: 1s move ease;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    @keyframes move {
+        0%{
+            transform: translateY(0vw);
+        }
+        50%{
+            transform: translateX(300vw);
+            background-color: crimson;
+        }
+        100%{
+            transform: translateY(80vw);
+            background-color: darkblue;
+        }
+    }
+</style>
 </head>
 <body>
-    <div>
-        <h2>pointers for block </h2>
-        <ol>
-                <li>
-                    width of the block level element is 100% of the 
-                    viewport width
-                </li>
-                <li>
-                    height of the block level element isnt set by default 
-               </li>
-               <li>
-                   height and width can be set explicitly using css
-               </li>
-        </ol>
+    <div class="parent">
+        <div class="child child-2"></div>
     </div>
-    <span> 
-       <h1>
-           pointers for inline 
-       </h1>
-       <ol>
-          <li>
-              width of the inline level element is dependent 
-              on the content 
-          </li>
-          <li>
-              height of the inline isnt set by default 
-          </li>
-          <li>
-              height and width can not explicitly set using css
-          </li>
-       </ol>
-    </span>
 </body>
-   
 </html>
