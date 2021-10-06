@@ -12,21 +12,51 @@
         box-sizing: border-box;
         margin: 4px;
     }
-    div.parent div:nth-child(4){
-        background-color: darkgreen;
-
-    }
+  h2{
+      padding: 5px;
+      color: darkgreen;
+      background-color: darkorange;
+  }
+  h2:hover{
+      background-color: darkred;
+      cursor: progress;
+  }
+  div::selection{
+      background-color: darkslategrey;
+  }
+  input:focus {
+      background-color: deepskyblue;
+      color: firebrick;
+      font-size: 2rem;
+  }
+  h2::after {
+      content: "im after";
+      font-size: 2rem;
+    color: black;
+    position: relative;
+  }
+  h2::before {
+      content: "im before";
+      font-size: 2rem;
+    color: rgba(0, 0, 0, 0.158);
+    position: relative;
+  }
     
 </style>
 </head>
 <body>
-   <div class="parent">
-       <div>im a div </div>
-       <h1> im a heading</h1>
-       <h2>im also a heading</h2>
-       <div>im div again</div>
+  <h2>
+      im a heading 
+  </h2>
+  <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Eaque, consequatur asperiores. Quod, facere repellendus!
+       Esse, asperiores repudiandae eius incidunt quibusdam,
+        animi suscipit tempora rerum ipsum aut minima officia
+         recusandae omnis!
+  </div>
+  <input type="text"/>
 
-   </div>
- 
+   
 </body>
 </html>
