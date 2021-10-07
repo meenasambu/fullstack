@@ -12,42 +12,34 @@
         box-sizing: border-box;
         margin: 4px;
     }
-  h2{
-      padding: 5px;
-      color: darkgreen;
-      background-color: darkorange;
-  }
-  h2:hover{
-      background-color: darkred;
-      cursor: progress;
-  }
-  div::selection{
-      background-color: darkslategrey;
-  }
-  input:focus {
-      background-color: deepskyblue;
-      color: firebrick;
-      font-size: 2rem;
-  }
-  h2::after {
-      content: "im after";
-      font-size: 2rem;
-    color: black;
-    position: relative;
-  }
-  h2::before {
-      content: "im before";
-      font-size: 2rem;
-    color: rgba(0, 0, 0, 0.158);
-    position: relative;
-  }
-    
+    h2:nth-child(1) {
+        padding: 5px;
+        color: cornsilk;
+        background-color:darkblue ;
+        transition-duration: 0.5s;
+        transition-timing-function: linear;
+    }
+    h2:nth-child(2) {
+        padding: 5px;
+        color: cornsilk;
+        background-color:darkblue ;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in;
+    }
+    h2:hover {
+        background-color: darkgoldenrod;
+        cursor: pointer;
+    }
+  
 </style>
 </head>
 <body>
   <h2>
       im a heading 
   </h2>
+  <h2>
+    im a heading 
+</h2>
   <div>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. 
       Eaque, consequatur asperiores. Quod, facere repellendus!
