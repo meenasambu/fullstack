@@ -4,37 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <title>TO-DO-LIST</title>
+       <title>TO-DO-LIST</title>
     <style>
        div.parent {
-           background-color: black;
-           
-           font-size: 2rem;
+          display: flex;
+          align-items: stretch;
+          background-color: #111;
+          height: 400px;
        }
-       @media (max-width: 500px){
-           div.parent {
-               background-color: coral !important;
-               font-size: 0.0rem;
-               color: cornsilk;
-           }
+       div.child
+        {
+            background-color: darkgoldenrod;
+            flex-basis: 80%;
 
         }
-        @media (max-width: 700px){
-           div.parent {
-               background-color:darkblue;
-               color: cornsilk;
-           }
-
+        div.sidebar {
+            background-color: darkred;
+            flex-basis: 20%;
         }
-       
+        @media (max-width: 450px) {
+            div.sidebar {
+                animation: 5s expand linear infinite;
+            }
+            div.child {
+                flex-basis: 100%;
+            }
+        }
+       @keyframes expand {
+           0%{
+               flex-basis: 0%;
+           }
+           100%{
+               flex-basis: 30%;
+           }
+       }
     </style>
 </head>
 <body>
     <div class="parent">
-   <h1>im  a heading</h1>
-   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur cum ad quo praesentium similique iste velit, quisquam earum voluptatem doloremque debitis consequatur voluptate ex minima optio rem perferendis molestias rerum?</p>
-
+        <div class="sidebar"></div>
+   <div class="child"></div>
     </div>
 </div>
 </body>
