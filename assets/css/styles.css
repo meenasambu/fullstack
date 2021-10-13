@@ -31,3 +31,29 @@ footer {
     width: 100%;
     
 }
+/* conatiner  */
+.container {
+      width: 350px;
+      height: 300px;
+      background-color: cornsilk;
+      align-items: center;
+     
+      
+      position: absolute;
+      justify-content: center;
+      top: 150px;
+      left: 180px;
+      
+      
+}
+.task-list {
+     width: 320px;
+     height: 20px;
+     background-color:crimson;
+     color: black;
+     border-radius: 2.5px;
+     margin: 10px;
+     display: flex;
+     justify-content: space-around;
+
+}
