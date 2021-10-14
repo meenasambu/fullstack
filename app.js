@@ -1,57 +1,37 @@
-// operators
+//DOM API and for loop
+//DOM - document object model
+// in DOM html doc we have to branches head and body , when u link js to head , body elements reference shows null.
+// when you add 'defer' to the linking tag in html file, it excutes after DOM completion
 
-// arithmetic operators
-var a=2
-var b=10
-console.log('a+b=',a+b)
-console.log('b-a=',b-a)
-console.log('b/a=',b/a)
-console.log('b*a=',b*a)
-console.log('b**a',b**a)
-console.log('b%a',b%a)
+var heading=document.getElementById('heading')
+heading.innerHTML="Hi from JS"
 
-// assignment operators
-b=11
-console.log('b',b)
-b+=1
-console.log('b',b)
-b++
-console.log('b',b)
-b=10
-++b
-console.log('b',b)
+console.log( heading)
 
-// comparision operators
+var heading=document.getElementById('heading')
+var para=document.getElementsByClassName('para')
 
-var d=10
-var e=2
-var f=10
-
-console.log(d>e)
-console.log(d<e)
-console.log(d>=e)
-console.log(d<=e)
-console.log(d==e)
-
-console.log(d==f)
-var f='10'
-console.log(d===f)
-console.log(d+f) // typecasting takes place here
-console.log(f+d)
-// typecasting-converting one data type into other data type 
-// == is a loose check , it doesnt check for type 
-// === is a strict comparision check
+console.log(heading)
+console.log(para.length)
+console.log(para[0])
+console.log(para[1])
 
 
-// logical operator
 
-console.log('true && true)',true && true)
-console.log('true && false)',true && false)
-console.log('false && true)',false && true)
-console.log('false && false)',false && false)
+var heading =document.getElementById('heading')
+var para=document.getElementsByClassName('para')
+var tags=document.getElementsByTagName('a')
+var query =document.querySelector('#heading')
 
-console.log('true || true', true || true)
-console.log('true || false', true || false)
-console.log('false || true', false || true)
-console.log('false || false', false || false)
+console.log(tags)
+console.log(query)
 
+
+
+
+
+
+para.push('asdf')
+//you dont have access to push and other methods, as it is not the actual array
+//its just gets the elements not the actual arrays 
+console.log(para)
