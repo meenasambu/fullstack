@@ -1,25 +1,57 @@
-// compiler compiles line by line
+// operators
+
+// arithmetic operators
+var a=2
+var b=10
+console.log('a+b=',a+b)
+console.log('b-a=',b-a)
+console.log('b/a=',b/a)
+console.log('b*a=',b*a)
+console.log('b**a',b**a)
+console.log('b%a',b%a)
+
+// assignment operators
+b=11
+console.log('b',b)
+b+=1
+console.log('b',b)
+b++
+console.log('b',b)
+b=10
+++b
+console.log('b',b)
+
+// comparision operators
+
+var d=10
+var e=2
+var f=10
+
+console.log(d>e)
+console.log(d<e)
+console.log(d>=e)
+console.log(d<=e)
+console.log(d==e)
+
+console.log(d==f)
+var f='10'
+console.log(d===f)
+console.log(d+f) // typecasting takes place here
+console.log(f+d)
+// typecasting-converting one data type into other data type 
+// == is a loose check , it doesnt check for type 
+// === is a strict comparision check
 
 
-var arr=[1,2,3,4,"age"]
+// logical operator
 
+console.log('true && true)',true && true)
+console.log('true && false)',true && false)
+console.log('false && true)',false && true)
+console.log('false && false)',false && false)
 
-
-console.log(arr)
-arr.push(5)
-console.log(arr.length)
-console.log(typeof arr)
-
-// as compilier compiles sep by step 
-// last most assigned number will be the value of var
-var age = 19
-age=21
-console.log(age)
-
-// const is used , not to alter the assigned value,
-// it throws an error bcoz sim has already assigned some value
-const sim=19
-sim=21
-console.log(age)
-
+console.log('true || true', true || true)
+console.log('true || false', true || false)
+console.log('false || true', false || true)
+console.log('false || false', false || false)
 
