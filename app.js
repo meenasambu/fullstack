@@ -1,28 +1,22 @@
-var list = document.querySelector('ul')
+// Functions
+function greet(name,age){
+    console.log(name,age)
+    console.log('Hello')
+}
+greet('ms',21)
 
-console.log(list)
+var add = function sum(a=10,b=20) {
+    var sum=a+b
+    return sum
+}
+console.log(add(10,20))
 
-var arr=['Go to the gym','cook oatmeal','eat']
+// arrow function
+// it removes the need of using function keyword in functions
 
-for (var i=0; i<arr.length;i++){
-    var element=document.createElement('li')
-    var textnode=document.createTextNode(arr[i])
-    console.log(textnode)
-    element.appendChild(textnode)
-    list.appendChild(element)
-    console.log(textnode)
+var add= (a=10,b=25) => {
+    var sum=a+b
+    return sum
 }
 
-
-
-
-
-
-
-// to iterate all elements in the list in html doc
-//we need two nodes in DOM , one for ul and other for elements li
-//in DOM we have head & body , rn we are only concerned abt body
-//Body-->ul-->li-->text
-//         -->li-->text
-//         -->li-->text
-//appending text to li node then iterating li in ul node
+console.log(add(10,30))
