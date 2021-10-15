@@ -1,25 +1,22 @@
-// ARROW FUNCTION 
-// it removes the need of using function keyword in functions
+//instead of iterating each element using for loop we can use callbackfunction
 
-var add= (a=10,b=25) => {
-    var sum=a+b
-    return sum
+var arr = ['eat','sleep','mve']
+
+// for (var i=0; i<arr.length; i++) {
+//     console.log(arr[i])
+// }
+
+
+// parameters in callbackfunction gives elements and index no , no matter wt u name those parameters
+var arr = ['eat','sleep','mve']
+var callbackfunction = (element,index) => {
+    console.log(element , index)
 }
 
-console.log(add(10,30))
+arr.forEach(callbackfunction) 
 
-// arrow function can be used like this as well 
+//instead of calling callbackfunc seperatly , directly we can use
 
-var sum=(a=5,b=65) => a+b
-console.log(sum(5,65))
-
-// if we have only one parameter , we can remove paranthesis as well
-// return can also be removed
-var sum=(String) => {
-    return 'hi'+String
-}
-console.log(sum(' ms'))
-
-var sum = String => 'hi ' +String
-
-console.log(sum('ms'))
+arr.forEach((element,index) => {
+    console.log(element,index)
+})
