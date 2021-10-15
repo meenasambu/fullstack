@@ -1,22 +1,18 @@
-//instead of iterating each element using for loop we can use callbackfunction
+var button = document.querySelector('button')
+var input = document.querySelector('input')
+var list = document.querySelector('ul')
 
-var arr = ['eat','sleep','mve']
-
-// for (var i=0; i<arr.length; i++) {
-//     console.log(arr[i])
-// }
-
-
-// parameters in callbackfunction gives elements and index no , no matter wt u name those parameters
-var arr = ['eat','sleep','mve']
-var callbackfunction = (element,index) => {
-    console.log(element , index)
+const callbackfunc =(event) => {
+    //console.log(button.value)  // gives the value entered in the button
+    console.log(input.innerHTML)
+//     const inputvalue=input.value
+//     const element=document.createElement('li')
+//     const textnode = document.createTextNode(inputvalue)
+//     element.appendChild(textnode)
+//     list.appendChild(element)
 }
 
-arr.forEach(callbackfunction) 
-
-//instead of calling callbackfunc seperatly , directly we can use
-
-arr.forEach((element,index) => {
-    console.log(element,index)
-})
+button.addEventListener('click',callbackfunc)
+// button.addEventListener('click',() => {
+//     console.log('sdf')
+// })
