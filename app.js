@@ -5,3 +5,6 @@ console.log(arr)
 
 arr.splice(3,3)
 console.log(arr)
+
+// deletes the element of the mentioned index 
+//and no.of elements from that mentioned index.
