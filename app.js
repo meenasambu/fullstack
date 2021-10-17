@@ -1,74 +1,30 @@
-const a = document.querySelectorAll('input')[0]
-const b = document.querySelectorAll('input')[1]
+var arr = [1,2,3,4,5,6,7,8]
 
-const add=document.querySelector('#add')
-const multiply=document.querySelector('#multiply')
-const divide = document.querySelector('#divide')
-const subtract=document.querySelector('#subtract')
+arr.unshift(6) //unshift appends elements to the front 
+console.log(arr)
 
-const resultbox=document.querySelector('.result')
+arr.shift()
+console.log(arr)//deletes the first element
 
-// const addfunc=() => {
-//     const result=parseInt(a.value)+parseInt(b.value)
-//     resultbox.innerHTML=result
-//     console.log(result)
-// }
+// shift removes 
+// unshift adds the elements 
 
+arr1 = arr.slice(2,5)
+console.log(arr1)
 
-// const multiplyfunc = () => {
-//     const result=parseInt(a.value) * parseInt(b.value)
-//     resultbox.innerHTML=result
-//     console.log(result)
-// }
+var arr = [1,2,3,4,5,6,7,8]
+var new_arr=[]
 
-
-// const dividefunc = () => {
-//     const result=parseInt(a.value) / parseInt(b.value)
-//     resultbox.innerHTML=result
-//     console.log(result)
-// }
-
-
-// const subtractfunc = () => {
-//     const result=parseInt(a.value) - parseInt(b.value)
-//     resultbox.innerHTML=result
-//     console.log(result)
-// }
-
-const calculate = (event , operation) => {
-    switch (operation){
-        case "add":
-            resultbox.innerHTML=parseInt(a.value)+parseInt(b.value)
-            break
-        case "multiply":
-            resultbox.innerHTML=parseInt(a.value) * parseInt(b.value)
-            break
-        case "divide":
-            resultbox.innerHTML=parseInt(a.value) / parseInt(b.value)
-            break
-        case "subtract" :
-            resultbox.innerHTML=parseInt(a.value) - parseInt(b.value)
-            break
-        default:
-            resultbox.innerHTML="not a valid opration"
-
-            
-    }
-
+for (var i=0;i<arr.length;i++) {
+    if (arr[i]%2==0)
+    new_arr.push(arr[i])
 }
+console.log(new_arr)
 
+// filter method - its like a call back func.
 
-add.addEventListener('click',(event) => {
-    calculate(event,"add")
+var new_arr1=arr.filter((Element,index) => {
+     if (Element % 2 == 0)
+     return true
 })
-multiply.addEventListener('click',(event) => {
-    calculate(event,"multiply")
-})
-divide.addEventListener('click',(event) => {
-    calculate(event,"divide")
-})
-subtract.addEventListener('click',(event) => {
-    calculate(event,"subtract")
-})
-
-
+console.log(new_arr1)
