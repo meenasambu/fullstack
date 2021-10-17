@@ -3,50 +3,24 @@
     padding: 0px;
     box-sizing: border-box;
 }
-div.parent {
-    height: 500px;
-    background-color: black;
+.div {
+    background-color: blueviolet;
+    width: 75px;
+    height: 150px;
 }
-div.child {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: brown;
-    animation: 1s move ease;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    
-  
-    
+#add {
+    background-color: darkgrey;
+    color: black;
 }
-div.child-1 {
-    width: 100px;
-    height: 100px;
-    margin-left: 100px;
-    border-radius: 50%;
-    background-color: brown;
-    animation: 1s move ease;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-delay: 1s;
-  
-    
+#multiply {
+    background-color: darkgrey;
+    color: black;
 }
-
-@keyframes move {
-    0%{
-        transform: translateY(0vw);
-    }
-    50%{
-        transform: translate(300px, 200px);
-        background-color: cadetblue;
-    }
-   
-    100%{
-        transform: translateY(400px);
-        background-color: darkblue;
-    }
-
+#divide {
+    background-color: darkgrey;
+    color: black;
+}
+#subtract {
+    background-color: darkgrey;
+    color: black;
 }
