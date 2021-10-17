@@ -8,35 +8,67 @@ const subtract=document.querySelector('#subtract')
 
 const resultbox=document.querySelector('.result')
 
-const addfunc=() => {
-    const result=parseInt(a.value)+parseInt(b.value)
-    resultbox.innerHTML=result
-    console.log(result)
+// const addfunc=() => {
+//     const result=parseInt(a.value)+parseInt(b.value)
+//     resultbox.innerHTML=result
+//     console.log(result)
+// }
+
+
+// const multiplyfunc = () => {
+//     const result=parseInt(a.value) * parseInt(b.value)
+//     resultbox.innerHTML=result
+//     console.log(result)
+// }
+
+
+// const dividefunc = () => {
+//     const result=parseInt(a.value) / parseInt(b.value)
+//     resultbox.innerHTML=result
+//     console.log(result)
+// }
+
+
+// const subtractfunc = () => {
+//     const result=parseInt(a.value) - parseInt(b.value)
+//     resultbox.innerHTML=result
+//     console.log(result)
+// }
+
+const calculate = (event , operation) => {
+    switch (operation){
+        case "add":
+            resultbox.innerHTML=parseInt(a.value)+parseInt(b.value)
+            break
+        case "multiply":
+            resultbox.innerHTML=parseInt(a.value) * parseInt(b.value)
+            break
+        case "divide":
+            resultbox.innerHTML=parseInt(a.value) / parseInt(b.value)
+            break
+        case "subtract" :
+            resultbox.innerHTML=parseInt(a.value) - parseInt(b.value)
+            break
+        default:
+            resultbox.innerHTML="not a valid opration"
+
+            
+    }
+
 }
-add.addEventListener('click',addfunc)
 
-multiply.addEventListener('click',() => {
-    const result=parseInt(a.value) * parseInt(b.value)
-    resultbox.innerHTML=result
-    console.log(result)
+
+add.addEventListener('click',(event) => {
+    calculate(event,"add")
 })
-
-divide.addEventListener('click',() => {
-    const result=parseInt(a.value) / parseInt(b.value)
-    resultbox.innerHTML=result
-    console.log(result)
+multiply.addEventListener('click',(event) => {
+    calculate(event,"multiply")
 })
-
-subtract.addEventListener('click',() => {
-    const result=parseInt(a.value) - parseInt(b.value)
-    resultbox.innerHTML=result
-    console.log(result)
-    
+divide.addEventListener('click',(event) => {
+    calculate(event,"divide")
 })
-
-
-
-
-
+subtract.addEventListener('click',(event) => {
+    calculate(event,"subtract")
+})
 
 
