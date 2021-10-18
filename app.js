@@ -1,11 +1,9 @@
-if (true) {
-    let name1 = 'rangerower'
-    
+let car = {
+    name:"c class",
+    manufacturer:"mercedes",
+    print : function () {
+        console.log(`${this.name} was created by ${this.manufacturer}`)
+    }
 }
-console.log(name1)
 
-if (true) {
-    var name = 'ferrari'
-    
-}
-console.log(name)
+car.print()
