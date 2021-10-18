@@ -1,24 +1,16 @@
-// function syntax
 let car = {
     name:"c class",
     manufacturer:"mercedes",
-    print : function () {
-        console.log(`${this.name} was created by ${this.manufacturer}`)
+    print:()=>{
+        console.log(`${car.name} was created by ${car.manufacturer}`)
     }
 }
 
-car.print()
+console.log(Object)
+console.log(car)
+console.log(Object.keys(car))
+console.log(Object.values(car))
 
-//arrow function syntax
-let car1 = {
-    name1:"c class",
-    manufacturer1:"mercedes",
-    print : ()=> {
-        console.log(`${this.name1} was created by ${this.manufacturer1}`)
-    }
-}
+//object is global
+// object provides all functionalities in the whole js file
 
-car1.print()
-
-//arrow function - 'this' keyword inside arrow function is always gng to point to window object
-//function - 'this' inside function declaration might chage depending on what object it is in
