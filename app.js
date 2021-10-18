@@ -1,13 +1,10 @@
+// promise is a object which has a value that is uncertain
+// promise have three values
+// 1. it can be fulfilled
+// 2. it can be rejected
+// 3. it can be pending
+// in simple, promise is an object that promises to retuen a value
+// takes time to return some value , but it returns value for sure
 
-//settimeout is a function that excutes when given time reached
-setTimeout(()=> {
-    console.log("something")
-},5000)
-
-console.log('hi')
-
-setTimeout(()=> {
-    console.log("nothing")
-},0)
-
-console.log("hello")
+var data = fetch('https://jsonplaceholder.typicode.com/todos/10')
+ console.log(data)
