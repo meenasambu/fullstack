@@ -1,10 +1,15 @@
-// promise is a object which has a value that is uncertain
-// promise have three values
-// 1. it can be fulfilled
-// 2. it can be rejected
-// 3. it can be pending
-// in simple, promise is an object that promises to retuen a value
-// takes time to return some value , but it returns value for sure
+let response = fetch('https://jsonplaceholder.typicode.com/users').then(urldata => {
+    let data1 = urldata.json()
+    console.log(data1)
+    return (data1)
+}).then(book => { console.log(book)})
 
-var data = fetch('https://jsonplaceholder.typicode.com/todos/10')
- console.log(data)
+
+// second then returns the data (i.e.,parseddata)
+//first then , considers the url and fetches the data in the url
+//and gives output as a promise 
+
+// then is like , when u initiate it , it takes the responsibility of the data mentioned before it
+
+//when data.json gets a value , it jst fulfilles the promise made by then
+//if u want data in json then return type is used 
