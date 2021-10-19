@@ -12,6 +12,11 @@ header {
   background-size: cover;
   background-position: center;
 }
+
+.dark {
+    background-color: white;
+    color: black;
+}
 /* footer styles */
 img.social {
     width: 20px;
@@ -32,6 +37,20 @@ footer {
     
 }
 /* conatiner  */
+
+.pos {
+    width: 250px;
+    height: 100px;
+    color: black;
+    display: flex;
+    
+    position: absolute;
+    justify-content: end;
+
+    
+}
+
+
 .container {
       width: 350px;
       height: 300px;
@@ -46,6 +65,7 @@ footer {
       
       
 }
+
 .task-list {
      width: 320px;
      height: 20px;
