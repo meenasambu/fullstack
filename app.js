@@ -13,3 +13,9 @@ let response = fetch('https://jsonplaceholder.typicode.com/users').then(urldata 
 
 //when data.json gets a value , it jst fulfilles the promise made by then
 //if u want data in json then return type is used 
+
+
+//above then can simply be written as
+let res = fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json()).then(data => {
+    console.log(data)
+})
