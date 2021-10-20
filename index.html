@@ -5,23 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/styles.css"> 
+    <script src="./app.js" ></script>
     <title>TO-DO-LIST</title>
     <style>
     
     </style>
 </head>
-<body>
-   <header></header>
+<body id="grinder_body">
+    <script type="text/javascript">
+        
+        window.onload = function(){  
+            const button =document.getElementById('grinder_button')
+            const header = document.querySelector('#grinder_header')
+            const footer = document.querySelector('#grinder_footer')
+            const body = document.querySelector('#grinder_body')
+            
+            
+console.log("-->s",button);
+if(button){
+    button.addEventListener('click',() =>{
+        console.log("check");
+        header.classList.toggle('dark')
+        footer.classList.toggle('blackcolor')
+        body.classList.toggle('grinder_color')      
+    })}}
+    </script>
+   <header id="grinder_header" class="light"></header>
    <div class="container">
+    <div class="arr">
     <h1>TODO LIST </h1>
-    <button>button</button>
+
+    <label class="switch">
+        <input type="checkbox" name="meena"  id="grinder_button">
+        <span class="slider round"></span>
+      </label>
+    </div>
+    
     <div class="task-list">
         <input style="width: 300px;" title="type list">
         <span>&#43;</span>
     </div>
+   
 
 </div>
-   <footer>
+   <footer id="grinder_footer">
        <div>
            <a href="https://github.com/meenasambu">
                Sambu Meena
