@@ -10,53 +10,20 @@ fetch('https://jsonplaceholder.typicode.com/users')
              console.log(data)
              data.forEach(user => {
                  
-                 let newrow=document.createElement('tr')
-                 let dataid = document.createElement('td')
-                 let dataidtextnode=document.createTextNode(user.id)
-                 dataid.appendChild(dataidtextnode)
-                 newrow.appendChild(dataid)
-
-                 let newrow1=document.createElement('tr')
-                 let dataname = document.createElement('td')
-                 let datanametextnode=document.createTextNode(user.name)
-                 dataid.appendChild(datanametextnode)
-                 newrow1.appendChild(dataname)
-
-                 let newrow2=document.createElement('tr')
-                 let datausername = document.createElement('td')
-                 let datausernametextnode=document.createTextNode(user.username)
-                 datausername.appendChild(datausernametextnode)
-                 newrow2.appendChild(datausername)
-
-                 let newrow3=document.createElement('tr')
-                 let dataemail= document.createElement('td')
-                 let dataemailtextnode=document.createTextNode(user.email)
-                 dataemail.appendChild(dataemailtextnode)
-                 newrow3.appendChild(dataemail)
-
-                 let newrow4=document.createElement('tr')
-                 let datahno = document.createElement('td')
-                 let datahnotextnode=document.createTextNode(user.address)
-                 datahno.appendChild(datahnotextnode)
-                 newrow4.appendChild(datahno)
-
-
-
-                 table.appendChild(newrow)
-                 table.appendChild(newrow1)
-                 table.appendChild(newrow2)
-                 table.appendChild(newrow3)
-                 table.appendChild(newrow4)
-
-
+                 let newRow=document.createElement('tr')
+                 let element = `
+                 <td>${user.id}</td>
+                 <td>${user.name}</td>
+                 <td>${user.email}</td>
+                 <td>${user.username}</td>`
+                 newRow.innerHTML = element
+                 table.appendChild(newRow)
              })
         })
 
+
         
-// create a new row first  - tr - row in a table
-// create an element  - td - thats a cell in table
-// then to the cell we need to add text 
-// so add textnode and fetch user id 
-// after fetching data id's append it to dataid
-// in the new row append dataid
-// after filling the row append it to the table
+// last time we did same thing for string 
+// but string data type is diff from node 
+// appendchild accepts only node
+
