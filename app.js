@@ -1,21 +1,32 @@
-let response = fetch('https://jsonplaceholder.typicode.com/users').then(urldata => {
-    let data1 = urldata.json()
-    console.log(data1)
-    return (data1)
-}).then(book => { console.log(book)})
+const table = document.querySelector('table')
+console.log(table)
 
 
-// second then returns the data (i.e.,parseddata)
-//first then , considers the url and fetches the data in the url
-//and gives output as a promise 
-
-// then is like , when u initiate it , it takes the responsibility of the data mentioned before it
-
-//when data.json gets a value , it jst fulfilles the promise made by then
-//if u want data in json then return type is used 
 
 
-//above then can simply be written as
-let res = fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json()).then(data => {
-    console.log(data)
-})
+fetch('https://jsonplaceholder.typicode.com/users')
+         .then(res =>res.json())
+         .then(data => {
+             console.log(data)
+             data.forEach(user => {
+                 
+                 let newrow=document.createElement('tr')
+                 let dataid = document.createElement('td')
+                 let dataidtextnode=document.createTextNode(user.id)
+                 //in the data wt we have fetch , to access the data user.id we use
+                 dataid.appendChild(dataidtextnode)
+                 newrow.appendChild(dataid)
+
+                 table.appendChild(newrow)
+
+             })
+        })
+
+        
+// create a new row first  - tr - row in a table
+// create an element  - td - thats a cell in table
+// then to the cell we need to add text 
+// so add textnode and fetch user id 
+// after fetching data id's append it to dataid
+// in the new row append dataid
+// after filling the row append it to the table
