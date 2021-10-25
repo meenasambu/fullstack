@@ -1,23 +1,17 @@
+const input=document.querySelector('input')
+const button = document.querySelector('button')
 
-
-// fetch('https://jsonplaceholder.typicode.com/users')
-//          .then(res =>res.json())
-//          .then(data => {
-//              console.log(data)
-//              data.forEach(user => {
-//                  console.log(data)
-//              })
-//         })     
-
-
-const fetchData = async () => {
-    const response = await fetch('https://jsonplaceholder.typicode.com/users')
-    console.log(response)
+const getdata = async () => {
+    const url = input.value
+    const response=await fetch(url)
     const data = await response.json()
     console.log(data)
 }
-fetchData()
+
+button.addEventListener('click',getdata)
 
 
-//await is only valid on async functions
-//await waits until it fetches the value 
+// get the url 
+// fetch the url under await
+// get the json of the fetched url
+// console the json fetched url
