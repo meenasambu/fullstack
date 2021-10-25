@@ -1,31 +1,23 @@
-const table = document.querySelector('table')
-console.log(table)
 
 
-const createRow=(user)=> {
-    let newRow=document.createElement('tr')
-    let element = `
-    <td>${user.id}</td>
-    <td>${user.name}</td>
-    <td>${user.email}</td>
-    <td>${user.username}</td>`
-    newRow.innerHTML = element
-    return newRow
+// fetch('https://jsonplaceholder.typicode.com/users')
+//          .then(res =>res.json())
+//          .then(data => {
+//              console.log(data)
+//              data.forEach(user => {
+//                  console.log(data)
+//              })
+//         })     
 
+
+const fetchData = async () => {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users')
+    console.log(response)
+    const data = await response.json()
+    console.log(data)
 }
-
-fetch('https://jsonplaceholder.typicode.com/users')
-         .then(res =>res.json())
-         .then(data => {
-             console.log(data)
-             data.forEach(user => {
-                 
-               
-                 table.appendChild(createRow(user))
-             })
-        })     
-// last time we did same thing for string 
-// but string data type is diff from node 
-// appendchild accepts only node
+fetchData()
 
 
+//await is only valid on async functions
+//await waits until it fetches the value 
